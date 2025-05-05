@@ -1,0 +1,139 @@
+### **1. Processing Unit**
+
+* **Arduino Uno or Arduino Nano**
+  *Use: The central controller for all the sensors and actuators.*
+  *Details:*
+
+  * Microcontroller: ATmega328P
+  * 14 digital I/O pins
+  * 6 analog inputs
+  * 16 MHz clock speed
+  * USB cable for power and programming
+
+### **2. Power Supply**
+
+* **Battery Pack (for mobility)**
+  *Use: Powers the entire system, preferably with a rechargeable option.*
+  *Details:*
+
+  * 7.4V Li-Po battery or 9V battery
+  * DC-DC step-down converter (if necessary)
+  * Power switch
+
+* **Voltage Regulator (optional)**
+  *Use: Ensure proper voltage supply to sensors and servos.*
+  *Details:*
+
+  * 5V voltage regulator for Arduino
+  * 3.3V regulator for certain sensors if required
+
+---
+
+### **3. Sensors**
+
+#### **Motion Detection**
+
+* **PIR Motion Sensor (HC-SR501)**
+  *Use: Detects motion in the environment.*
+  *Details:*
+
+  * 5V input
+  * Adjustable sensitivity and delay
+  * Digital output (HIGH when motion is detected)
+
+#### **Object Detection**
+
+* **Ultrasonic Distance Sensor (HC-SR04)**
+  *Use: To detect the distance of obstacles for navigation.*
+  *Details:*
+
+  * 5V operating voltage
+  * Range: 2cm - 4m
+  * 2-pin interface (Trig, Echo)
+
+* **IR Sensor (optional for close object detection)**
+  *Use: To detect objects at a closer range.*
+  *Details:*
+
+  * 5V operating voltage
+  * Detects obstacles within 5-10 cm
+
+---
+
+### **4. Actuators**
+
+#### **Motors (for movement)**
+
+* **DC Motors (2 units)**
+  *Use: To provide movement and drive the robot.*
+  *Details:*
+
+  * 3-6V DC
+  * Equipped with wheels
+  * Requires motor driver module for control
+
+* **Motor Driver (L298N or L293D)**
+  *Use: Controls the direction and speed of the DC motors.*
+  *Details:*
+
+  * Dual H-Bridge motor driver
+  * Can drive 2 DC motors simultaneously
+  * Requires external power for motors
+
+---
+
+### **5. Additional Components**
+
+#### **Chassis**
+
+* **Plastic or Acrylic Chassis**
+  *Use: To mount all the components together.*
+  *Details:*
+
+  * Pre-built chassis or DIY with mounting holes for motors, sensors, and Arduino
+
+#### **Wheels**
+
+* **2x Wheels for DC Motors**
+  *Use: To enable movement of the bot.*
+  *Details:*
+
+  * Compatible with DC motors
+  * Diameter: 6-7 cm (adjustable depending on the chassis)
+
+---
+
+### **6. Miscellaneous Components**
+
+* **Jumper Wires (male-to-female, female-to-female)**
+  *Use: For connecting components to the Arduino board.*
+
+* **Breadboard (optional)**
+  *Use: For testing the circuits before final assembly.*
+
+* **Screws, Nuts, and Standoffs**
+  *Use: To fix all components onto the chassis.*
+
+* **LEDs and Resistors** (optional)
+  *Use: To provide visual feedback for the system.*
+  *Details:*
+
+  * 5mm LEDs for status indication
+  * Resistors for limiting current to LEDs
+
+---
+
+### **7. Software**
+
+* **Arduino IDE**
+  *Use: For programming the Arduino board to handle sensor data and control actuators.*
+
+---
+
+### **Basic Working Setup:**
+
+1. **Arduino Uno** processes data from the **PIR Motion Sensor** and **Ultrasonic Sensor**.
+2. The **PIR Sensor** detects motion and triggers the system to start the **DC motors**.
+3. The **Ultrasonic Sensor** continuously measures distance to obstacles, and if an obstacle is too close, it stops or re-directs the robot.
+4. **Motor Driver** (e.g., L298N) controls the speed and direction of the motors based on the input from the Arduino.
+
